@@ -1,0 +1,90 @@
+
+2024/12/30 (15:29:44) | ===> btop++ v.1.4.0
+2024/12/30 (15:29:44) | WARNING: NVML: Failed to get GPU power usage: Not Supported
+
+2024/12/30 (15:30:56) | ===> btop++ v.1.4.0
+2024/12/30 (15:30:56) | WARNING: NVML: Failed to get GPU power usage: Not Supported
+
+2024/12/30 (19:09:05) | ===> btop++ v.1.4.0
+2024/12/30 (19:09:05) | WARNING: NVML: Failed to get GPU power usage: Not Supported
+
+2024/12/30 (20:53:23) | ===> btop++ v.1.4.0
+2024/12/30 (20:53:23) | WARNING: NVML: Failed to get GPU power usage: Not Supported
+
+2024/12/31 (10:13:02) | ===> btop++ v.1.4.0
+2024/12/31 (10:13:02) | WARNING: NVML: Failed to get GPU power usage: Not Supported
+
+2024/12/31 (10:55:46) | ===> btop++ v.1.4.0
+2024/12/31 (10:55:46) | WARNING: NVML: Failed to get GPU power usage: Not Supported
+
+2024/12/31 (13:30:42) | ===> btop++ v.1.4.0
+2024/12/31 (13:30:42) | WARNING: NVML: Failed to get GPU power usage: Not Supported
+
+2024/12/31 (17:16:08) | ===> btop++ v.1.4.0
+2024/12/31 (17:16:08) | WARNING: NVML: Failed to get GPU power usage: Not Supported
+
+2024/12/31 (18:26:32) | ===> btop++ v.1.4.0
+2024/12/31 (18:26:32) | WARNING: NVML: Failed to get GPU power usage: Not Supported
+
+2024/12/31 (18:28:54) | ===> btop++ v.1.4.0
+2024/12/31 (18:28:54) | WARNING: NVML: Failed to get GPU power usage: Not Supported
+
+2025/01/01 (12:49:31) | ===> btop++ v.1.4.0
+2025/01/01 (12:49:31) | WARNING: NVML: Failed to get GPU power usage: Not Supported
+
+2025/01/01 (12:59:58) | ===> btop++ v.1.4.0
+2025/01/01 (12:59:58) | WARNING: NVML: Failed to get GPU power usage: Not Supported
+
+2025/01/01 (19:00:47) | ===> btop++ v.1.4.0
+2025/01/01 (19:00:47) | WARNING: NVML: Failed to get GPU power usage: Not Supported
+
+2025/01/01 (21:43:27) | ===> btop++ v.1.4.0
+2025/01/01 (21:43:27) | WARNING: NVML: Failed to get GPU power usage: Not Supported
+
+2025/01/02 (18:24:30) | ===> btop++ v.1.4.0
+2025/01/02 (18:24:30) | WARNING: NVML: Failed to get GPU power usage: Not Supported
+
+2025/01/03 (22:47:54) | ===> btop++ v.1.4.0
+2025/01/03 (22:47:54) | WARNING: ROCm SMI: Failed to get maximum GPU temperature, defaulting to 110°C
+2025/01/03 (22:47:54) | WARNING: ROCm SMI: Failed to get PCIe throughput
+2025/01/03 (22:47:54) | WARNING: ROCm SMI: Failed to get maximum GPU power draw, defaulting to 225W
+2025/01/03 (22:47:54) | WARNING: ROCm SMI: Failed to get maximum GPU temperature, defaulting to 110°C
+2025/01/03 (22:47:54) | WARNING: ROCm SMI: Failed to get VRAM utilization
+2025/01/03 (22:47:54) | WARNING: ROCm SMI: Failed to get GPU power usage
+2025/01/03 (22:47:54) | WARNING: ROCm SMI: Failed to get PCIe throughput
+
+2025/01/03 (23:18:01) | ===> btop++ v.1.4.0
+2025/01/03 (23:18:01) | WARNING: ROCm SMI: Failed to get maximum GPU temperature, defaulting to 110°C
+2025/01/03 (23:18:01) | WARNING: ROCm SMI: Failed to get PCIe throughput
+2025/01/03 (23:18:01) | WARNING: ROCm SMI: Failed to get maximum GPU power draw, defaulting to 225W
+2025/01/03 (23:18:01) | WARNING: ROCm SMI: Failed to get maximum GPU temperature, defaulting to 110°C
+2025/01/03 (23:18:01) | WARNING: ROCm SMI: Failed to get VRAM utilization
+2025/01/03 (23:18:01) | WARNING: ROCm SMI: Failed to get GPU power usage
+2025/01/03 (23:18:01) | WARNING: ROCm SMI: Failed to get PCIe throughput
+
+2025/01/03 (23:21:33) | ===> btop++ v.1.4.0
+2025/01/03 (23:21:33) | WARNING: ROCm SMI: Failed to get maximum GPU temperature, defaulting to 110°C
+2025/01/03 (23:21:33) | WARNING: ROCm SMI: Failed to get PCIe throughput
+2025/01/03 (23:21:33) | WARNING: ROCm SMI: Failed to get maximum GPU power draw, defaulting to 225W
+2025/01/03 (23:21:33) | WARNING: ROCm SMI: Failed to get maximum GPU temperature, defaulting to 110°C
+2025/01/03 (23:21:33) | WARNING: ROCm SMI: Failed to get VRAM utilization
+2025/01/03 (23:21:33) | WARNING: ROCm SMI: Failed to get GPU power usage
+2025/01/03 (23:21:33) | WARNING: ROCm SMI: Failed to get PCIe throughput
+
+2025/01/04 (01:01:26) | ===> btop++ v.1.4.0
+2025/01/04 (01:01:26) | WARNING: ROCm SMI: Failed to get maximum GPU temperature, defaulting to 110°C
+2025/01/04 (01:01:26) | WARNING: ROCm SMI: Failed to get PCIe throughput
+2025/01/04 (01:01:26) | WARNING: ROCm SMI: Failed to get maximum GPU power draw, defaulting to 225W
+2025/01/04 (01:01:26) | WARNING: ROCm SMI: Failed to get maximum GPU temperature, defaulting to 110°C
+2025/01/04 (01:01:26) | WARNING: ROCm SMI: Failed to get VRAM utilization
+2025/01/04 (01:01:26) | WARNING: ROCm SMI: Failed to get GPU power usage
+2025/01/04 (01:01:26) | WARNING: ROCm SMI: Failed to get PCIe throughput
+
+2025/01/04 (22:39:21) | ===> btop++ v.1.4.0
+2025/01/04 (22:39:21) | WARNING: ROCm SMI: Failed to get maximum GPU temperature, defaulting to 110°C
+2025/01/04 (22:39:21) | WARNING: ROCm SMI: Failed to get PCIe throughput
+2025/01/04 (22:39:21) | WARNING: ROCm SMI: Failed to get maximum GPU power draw, defaulting to 225W
+2025/01/04 (22:39:21) | WARNING: ROCm SMI: Failed to get maximum GPU temperature, defaulting to 110°C
+2025/01/04 (22:39:21) | WARNING: ROCm SMI: Failed to get VRAM utilization
+2025/01/04 (22:39:21) | WARNING: ROCm SMI: Failed to get GPU power usage
+2025/01/04 (22:39:21) | WARNING: ROCm SMI: Failed to get PCIe throughput
