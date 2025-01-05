@@ -1,0 +1,19 @@
+#!/usr/bin/bash
+
+# Define the screenshot directory
+SCREENSHOT_DIR=/home/stick/Pictures/grim
+
+# Create the directory if it doesn't exist
+mkdir -p "$SCREENSHOT_DIR"
+
+# File name with timestamp
+FILENAME="screenshot-$(date +'%Y-%m-%d_%H-%M-%S').png"
+
+# Take a screenshot and save it to the directory
+grim -g "$(slurp)" "$SCREENSHOT_DIR/$FILENAME"
+
+# Copy it to the clipboard
+wl-copy < "$SCREENSHOT_DIR/$FILENAME"
+
+echo "Screenshot saved to $SCREENSHOT_DIR/$FILENAME and copied to clipboard."
+

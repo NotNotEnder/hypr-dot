@@ -1,0 +1,18 @@
+#!/usr/bin/bash
+
+#Check current bg or sum idk
+bg=$(cat /home/stick/.config/hypr/store/current_bg.txt)
+
+if [[ "$bg" == "1" ]]; then
+	echo "Changing Wallpaper..."
+	hyprctl hyprpaper preload "/home/stick/Wallpapers/Konachan.png"
+	hyprctl hyprpaper wallpaper "HDMI-A-1, /home/stick/Wallpapers/Konachan.png"
+	echo "2" > "/home/stick/.config/hypr/store/current_bg.txt"
+fi
+
+if [[ "$bg" == "2" ]]; then
+	echo "Changing Wallpaper..."
+	hyprctl hyprctl preload "/home/stick/Wallpapers/wide.jpg"
+	hyprctl hyprpaper wallpaper "HDMI-A-1, /home/stick/Wallpapers/wide.jpg"
+	echo "1" > "/home/stick/.config/hypr/store/current_bg.txt"
+fi

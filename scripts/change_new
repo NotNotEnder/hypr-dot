@@ -1,0 +1,81 @@
+#!/usr/bin/bash
+
+hypr=~/.config/hypr
+wallpapers_dir=~/Wallpapers
+state_file=$hypr/current_wallpaper_index.txt
+
+# Ensure the wallpapers directory exists and contains files
+if [[ ! -d $wallpapers_dir ]] || [[ -z $(ls "$wallpapers_dir" 2>/dev/null) ]]; then
+    echo "Error: No wallpapers found in $wallpapers_dir"
+    exit 1
+fi
+
+# Create state file if it doesn't exist
+if [[ ! -f $state_file ]]; then
+    echo 0 > $state_file
+fi
+
+# Compute the hashes and associate them with file paths
+declare -A wallpapers
+while IFS= read -r line; do
+    hash=$(echo "$line" | awk '{print $1}')
+    path=$(echo "$line" | awk '{print $2}')
+    first_char="${hash:0:1}"
+
+    # Handle duplicate first characters
+    if [[ -n "${wallpapers[$first_char]}" ]]; then
+        counter=1
+        while [[ -n "${wallpapers[$first_char$counter]}" ]]; do
+            ((counter++))
+        done
+        first_char="${first_char}${counter}"
+    fi
+    wallpapers["$first_char"]="$path"
+done < <(shasum -a 256 "$wallpapers_dir"/* | sort)
+
+# Debug: Print the wallpapers map
+if [[ ${#wallpapers[@]} -eq 0 ]]; then
+    echo "Error: No valid wallpapers were hashed."
+    exit 1
+fi
+
+# Debug: Print all keys and values
+echo "Wallpapers Map:"
+for key in "${!wallpapers[@]}"; do
+    echo "$key -> ${wallpapers[$key]}"
+done
+
+# Get the list of keys (sorted by first character)
+keys=($(printf "%s\n" "${!wallpapers[@]}" | sort))
+
+# Read the current index from the state file
+current_index=$(<"$state_file")
+
+# Debug: Validate current index
+if [[ ! "$current_index" =~ ^[0-9]+$ ]] || [[ $current_index -ge ${#keys[@]} ]]; then
+    echo "Warning: Resetting current index to 0."
+    current_index=0
+fi
+
+# Get the next wallpaper in the list
+next_index=$(( (current_index + 1) % ${#keys[@]} ))
+next_key="${keys[$next_index]}"
+next_wallpaper="${wallpapers[$next_key]}"
+
+# Debug: Output next wallpaper
+echo "Next Wallpaper: $next_wallpaper"
+
+# Change the wallpaper
+if [[ -f $next_wallpaper ]]; then
+    hyprctl hyprpaper preload "$next_wallpaper"
+    hyprctl hyprpaper wallpaper "DP-2,$next_wallpaper"
+else
+    echo "Error: Wallpaper file does not exist: $next_wallpaper"
+    exit 1
+fi
+
+# Save the next index to the state file
+echo "$next_index" > "$state_file"
+
+#Show notification
+notify-send "Changing Wallpaper" -i "$next_wallpaper"

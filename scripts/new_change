@@ -1,0 +1,50 @@
+#!/usr/bin/bash
+
+hypr=~/.config/hypr
+
+#Hash the Wallpapers
+
+sum=$(shasum -a 256 ~/Wallpapers/*)
+echo "The hashes are:"
+echo "$sum" && echo "$sum" > $hypr/store/bg_hashes.txt
+echo ""
+
+#Grab first numbers of each hash
+
+echo "The first character of each is:"
+first=$(echo "$sum" | awk '{print substr($1, 1, 1)}' | paste -sd ',')
+echo "$first"
+echo ""
+
+#Put the first characters in order
+
+sorted=$(echo "$first" | sort)
+echo "The values sored are:"
+echo "$sorted"
+
+#Check for repeats
+
+echo "$sorted" | {
+    declare -A seen
+    unique_ids=()
+    counter=0
+
+    while read -r char; do
+        #Car use??????
+        if [[ -n "${seen[$char]}" ]]; then
+            #WE be counting
+            while [[ -n "${seen[$counter]}" ]]; do
+                ((counter++))
+            done
+            unique_ids+=("$counter")
+            seen[$counter]=1
+        else
+            #Queer (being itself)
+            unique_ids+=("$char")
+            seen[$char]=1
+        fi
+    done
+
+    #LIST AGIAN OMG I FUCKING HATE BASH
+    IFS=',' echo "${unique_ids[*]}"
+}
